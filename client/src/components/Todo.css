@@ -1,0 +1,13 @@
+.task {
+    background-color: #34495e;
+    padding: 15px;
+    margin: 5px;
+    width: 99%;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .task span {
+    color: #FFFFFF;
+  }
