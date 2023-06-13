@@ -1,5 +1,4 @@
 // we are using this controller file to run the logics to add todo to our application and passingit as argument to the api request endpoint 
-import Todo from '../model/Todo.js';
 import storage from 'node-persist';
 
 storage.init();
@@ -26,52 +25,3 @@ export const getAllTodos = async (req, res) => {
     res.send(todos);
     
 }
-
-
-// it will give response based on if the todo is done or not if yes it goes into done tab if not then into active tab
-// export const toggleTodoDone = async (request, response) => {
-//     try {
-//         const todoRef = await Todo.findById(request.params.id);
-
-//         const todo = await Todo.findOneAndUpdate(
-//             { _id: request.params.id },
-//             // comes from the todo
-//             { done: !todoRef.done }
-//         )
-
-//         await todo.save();
-
-//         return response.status(200).json(todo);
-//     } catch (error) {
-//         return response.status(500).json(error.message);
-//     }
-// }
-
-// // updtae the inner text of the todo based on which tab is selected
-// export const updateTodo = async (request, response) => {
-//     try {
-//         await Todo.findOneAndUpdate(
-//             { _id: request.params.id },
-//             { data: request.body.data }
-//         )
-
-//         const todo = await Todo.findById(request.params.id);
-
-//         return response.status(200).json(todo);
-//     } catch (error) {
-//         return response.status(500).json(error.message);
-//     }
-// }
-
-
-// // delete todo if the id matched 
-// export const deleteTodo = async (request, response) => {
-//     try {
-//         // find by id dosent required to put id: of the mogodb
-//         const todo = await Todo.findByIdAndDelete(request.params.id)
-
-//         return response.status(200).json(todo);
-//     } catch (error) {
-//         return response.status(500).json(error.message);
-//     }
-// }

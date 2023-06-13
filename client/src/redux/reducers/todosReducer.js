@@ -25,24 +25,6 @@ export const todosReducers = (state = [], action) => {
         case actionTypes.GETALL_TODO:
             return action.payload
 
-            // in case we are switching between different tabs of the todos
-        // case actionTypes.TOGGLE_TODO:
-        //     return state.map(todo => (todo._id === action.payload._id ? {
-        //         ...todo,
-        //         done: !todo.done
-        //     } : todo))
-
-
-        //     // in case we want to update a todo in the list
-        // case actionTypes.UPDATE_TODO:
-        //     return state.map(todo => (todo._id === action.payload._id ? {
-        //         ...todo,
-        //         data: action.payload.data
-        //     } : todo))
-
-        //     // in case we want to delete a todo from the list
-        // case actionTypes.DELETE_TODO:
-        //     return state.filter(todo => todo._id !== action.payload._id);
 
         default:
             return state;

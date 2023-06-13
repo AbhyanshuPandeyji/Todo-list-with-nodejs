@@ -20,10 +20,6 @@ const Todo = ({ todo }) => {
     // intializing dispatch
 
 
-    const onFormSubmit = (e) => {
-        // e.preventDefault();
-    }
-
     return (
         // all in the list for the better styling in one line
         <li
@@ -31,11 +27,6 @@ const Todo = ({ todo }) => {
         >
            {/* for dispalying the data on the todo input box when the action is happening in the todo line */}
             <span >{todo?.data}</span>
-
-            <form
-                onSubmit={onFormSubmit}
-            >
-            </form>
         </li>
     )
 }
